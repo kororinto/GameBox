@@ -1,4 +1,5 @@
 import { Block } from './tetris/Block'
+import { BlockWall } from './tetris/BlockWall'
 
 interface GameBoxParam {
     gameName: string
@@ -63,6 +64,9 @@ export class GameStart extends egret.DisplayObjectContainer {
     // 游戏屏幕
     public screen: egret.Shape
     public tips: egret.Shape
+
+    // 俄罗斯方块
+    public blockWall: BlockWall
 
     /**
     * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
@@ -211,10 +215,9 @@ export class GameStart extends egret.DisplayObjectContainer {
     private startTetris() {
         console.log('游戏开始')
         // 绑定按键事件
-        // 初始化方块强
-        let blockWall = new BlockWall()
-        // 随机生成一种方块
-        let block = new Block(this)
-        // 启动定时器 方块向下移动
+        // 初始化方块墙
+        this.blockWall = new BlockWall(this)
+        // 生成方块
+        new Block(this)
     }
 }
