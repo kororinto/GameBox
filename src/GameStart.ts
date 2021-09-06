@@ -20,8 +20,8 @@ export class GameStart extends egret.DisplayObjectContainer {
         this.screenW = param.screenW
         this.screenH = param.screenH
         this.startBtnRadius = 50
-        this.directionBtnSize = 40
-        this.actionBtnSize = 30
+        this.directionBtnSize = 60
+        this.actionBtnSize = 40
 
         this.drawBg()
         this.drawBtn()
@@ -162,13 +162,13 @@ export class GameStart extends egret.DisplayObjectContainer {
         this.rightRotateBtn.touchEnabled = true
         this.dropDownBtn.touchEnabled = true
         this.leftRotateBtn.graphics.beginFill(0x333333)
-        this.leftRotateBtn.graphics.drawCircle(this.parentStage.stageWidth - this.screenX - 3 * this.actionBtnSize, this.screenY + this.screenH + 250 - 3 * this.actionBtnSize, this.actionBtnSize)
+        this.leftRotateBtn.graphics.drawCircle(this.parentStage.stageWidth - this.screenX - 3 * this.actionBtnSize, this.screenY + this.screenH + 350 - 3 * this.actionBtnSize, this.actionBtnSize)
         this.leftRotateBtn.graphics.endFill()
         this.rightRotateBtn.graphics.beginFill(0x333333)
-        this.rightRotateBtn.graphics.drawCircle(this.parentStage.stageWidth - this.screenX + this.actionBtnSize, this.screenY + this.screenH + 250 - 3 * this.actionBtnSize, this.actionBtnSize)
+        this.rightRotateBtn.graphics.drawCircle(this.parentStage.stageWidth - this.screenX + this.actionBtnSize, this.screenY + this.screenH + 350 - 3 * this.actionBtnSize, this.actionBtnSize)
         this.rightRotateBtn.graphics.endFill()
         this.dropDownBtn.graphics.beginFill(0x333333)
-        this.dropDownBtn.graphics.drawCircle(this.parentStage.stageWidth - this.screenX - this.actionBtnSize, this.screenY + this.screenH + 250 - this.actionBtnSize, this.actionBtnSize)
+        this.dropDownBtn.graphics.drawCircle(this.parentStage.stageWidth - this.screenX - this.actionBtnSize, this.screenY + this.screenH + 200 - this.actionBtnSize, this.actionBtnSize)
         this.dropDownBtn.graphics.endFill()
         this.parentStage.addChild(this.leftRotateBtn)
         this.parentStage.addChild(this.rightRotateBtn)
